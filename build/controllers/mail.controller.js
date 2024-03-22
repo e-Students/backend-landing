@@ -24,7 +24,7 @@ exports.addNewMail = addNewMail;
 const getAllMails = (_req, res) => tslib_1.__awaiter(void 0, void 0, void 0, function* () {
     try {
         const mails = yield mail_1.default.find();
-        const mailList = mails.map((mail) => mail.email);
+        const mailList = mails.map((mail) => mail.email).join(', ');
         res.status(200).json({ mailList });
     }
     catch (error) {

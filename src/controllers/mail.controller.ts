@@ -22,7 +22,7 @@ export const addNewMail = async (req: Request, res: Response) => {
 export const getAllMails = async (_req: Request, res: Response) => {
   try {
     const mails = await Mail.find();
-    const mailList = mails.map((mail) => mail.email);
+    const mailList = mails.map((mail) => mail.email).join(', ');
     res.status(200).json({ mailList });
   } catch (error: any) {
     res.status(500).send({ message: error.message });

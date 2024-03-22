@@ -1,7 +1,5 @@
 import { createTransport } from 'nodemailer';
 import 'dotenv/config';
-import { create } from 'domain';
-import { CreateEmailCampaign } from '@getbrevo/brevo';
 
 const transporter = createTransport({
   host: 'smtp-relay.brevo.com',
