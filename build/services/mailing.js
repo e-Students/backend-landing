@@ -17,6 +17,7 @@ function sendMailFromContact(body) {
         return yield transporter.sendMail({
             from: process.env.EMAIL_USER,
             to: process.env.EMAIL_USER,
+            cc: process.env.OTHER_EMAIL,
             subject: 'From Contact Us eStudents',
             html: createEmail(body),
         });
