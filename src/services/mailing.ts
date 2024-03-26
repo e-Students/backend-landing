@@ -20,6 +20,7 @@ export async function sendMailFromContact(body: Email) {
   return await transporter.sendMail({
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,
+    cc: process.env.OTHER_EMAIL,
     subject: 'From Contact Us eStudents',
     html: createEmail(body),
   });
