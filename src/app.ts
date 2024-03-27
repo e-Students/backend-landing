@@ -15,7 +15,7 @@ app.use(express.json());
 app.use('/', mailRoutes);
 
 app.get('/helper', (_req: Request, res: Response) => {
-  res.send('Road to success is always under construction!');
+  res.send('Road to success is always under construction!').status(200);
 });
 
 export default app;

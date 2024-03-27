@@ -14,7 +14,7 @@ app.use((0, cors_1.default)({
 app.use(express_1.default.json());
 app.use('/', mail_1.default);
 app.get('/helper', (_req, res) => {
-    res.send('Road to success is always under construction!');
+    res.send('Road to success is always under construction!').status(200);
 });
 exports.default = app;
 //# sourceMappingURL=app.js.map
