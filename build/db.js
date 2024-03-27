@@ -6,11 +6,11 @@ const mongoose_1 = tslib_1.__importDefault(require("mongoose"));
 require("dotenv/config");
 const connectDB = () => tslib_1.__awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield mongoose_1.default.connect(process.env.MONGO_URI); // MONGO_URI is the connection string
+        yield mongoose_1.default.connect(process.env.MONGO_URL); // MONGO_URI is the connection string
         console.log('MongoDB connected');
     }
     catch (error) {
-        console.log('MongoDB connection failed');
+        console.log(error);
     }
 });
 exports.connectDB = connectDB;
