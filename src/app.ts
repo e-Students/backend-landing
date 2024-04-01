@@ -7,7 +7,7 @@ const app: Express = express();
 app.use(morgan('dev'));
 app.use(
   cors({
-    origin: 'https://e-students.netlify.app',
+    origin: 'https://estudents.xyz',
     credentials: true,
   })
 );
